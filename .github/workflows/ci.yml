@@ -24,10 +24,12 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: ./cypress-intermediario-v2
+        # Remova ou ajuste o working-directory se necessário
+        # working-directory: ./cypress-intermediario-v2
 
       - name: Run Cypress tests
         run: npx cypress run
-        working-directory: ./cypress-intermediario-v2
+        # Remova ou ajuste o working-directory se necessário
+        # working-directory: ./cypress-intermediario-v2
         env:
           CI: true
