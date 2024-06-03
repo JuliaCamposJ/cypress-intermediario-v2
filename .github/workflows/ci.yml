@@ -30,6 +30,6 @@ jobs:
       - name: Run Cypress tests
         run: npx cypress run
         # Remova ou ajuste o working-directory se necessário
-        # working-directory: ./cypress-intermediario-v2
+        working-directory: ./cypress-intermediario-v2
         env:
           CI: true
