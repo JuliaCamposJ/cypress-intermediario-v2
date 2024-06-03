@@ -20,12 +20,14 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20' # Ou a versão do Node.js que você está usando
+          node-version: '16' # Ou a versão do Node.js que você está usando
 
       - name: Install dependencies
         run: npm install
+        working-directory: ./cypress-intermediario-v2
 
       - name: Run Cypress tests
         run: npx cypress run
+        working-directory: ./cypress-intermediario-v2
         env:
           CI: true
