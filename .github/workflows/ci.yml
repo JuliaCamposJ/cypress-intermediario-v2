@@ -20,15 +20,15 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'  # Ou a versão do Node.js que você está usando
-
-      - name: List directory contents
-        run: ls -la
+          node-version: '16'  # ou a versão do Node.js que você está usando
 
       - name: Install dependencies
         run: npm install
 
+      - name: List directory contents
+        run: ls -la  # Verificar estrutura do diretório
+
       - name: Run Cypress tests
-        run: npx cypress run
+        run: npx cypress run --browser chrome
         env:
           CI: true
